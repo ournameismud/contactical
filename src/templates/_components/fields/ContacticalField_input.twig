@@ -1,0 +1,67 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Contactical plugin for Craft CMS 3.x
+ *
+ * ContacticalField Field Input
+ *
+ * @author    @cole007
+ * @copyright Copyright (c) 2018 @cole007
+ * @link      http://ournameismud.co.uk/
+ * @package   Contactical
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% if field.contacticalAddress %}
+	{{ forms.textareaField({
+	    label: 'Address',
+	    id: id ~ 'contacticalAddress',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalAddress]',
+	    value: value.contacticalAddress is defined ? value.contacticalAddress
+	}) }}
+{% endif %}
+
+{% if field.contacticalTelephone %}
+	{{ forms.textField({
+	    label: 'Telephone',
+	    id: id ~ 'contacticalTelephone',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalTelephone]',
+	    value: value.contacticalTelephone is defined ? value.contacticalTelephone
+	}) }}
+{% endif %}
+
+{% if field.contacticalWeb %}
+	{{ forms.textField({
+	    label: 'URL',
+	    id: id ~ 'contacticalWeb',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalWeb]',
+	    value: value.contacticalWeb is defined ? value.contacticalWeb
+	}) }}
+{% endif %}
+
+{% if field.contacticalEmail %}
+	{{ forms.textField({
+	    label: 'Email',
+	    id: id ~ 'contacticalEmail',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalEmail]',
+	    value: value.contacticalEmail is defined ? value.contacticalEmail
+	}) }}
+{% endif %}
+
+{% if field.contacticalLocation %}
+	{{ forms.textField({
+	    label: 'Location',
+	    id: id ~ 'contacticalLocation',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalLocation]',
+	    value: value.contacticalLocation is defined ? value.contacticalLocation
+	}) }}
+{% endif %}
+

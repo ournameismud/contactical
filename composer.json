@@ -1,0 +1,40 @@
+{
+    "name": "ournameismud/contactical",
+    "description": "Simple fieldtype for capturing contact details",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "contactical"
+    ],
+    "support": {
+        "docs": "https://github.com/ournameismud/contactical/blob/master/README.md",
+        "issues": "https://github.com/ournameismud/contactical/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "@cole007",
+            "homepage": "http://ournameismud.co.uk/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "ournameismud\\contactical\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Contactical",
+        "handle": "contactical",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/ournameismud/contactical/master/CHANGELOG.md",
+        "class": "ournameismud\\contactical\\Contactical"
+    }
+}

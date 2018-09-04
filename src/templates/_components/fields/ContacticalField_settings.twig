@@ -1,0 +1,37 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Contactical plugin for Craft CMS
+ *
+ * ContacticalField Field Settings
+ *
+ * @author    @cole007
+ * @copyright Copyright (c) 2018 @cole007
+ * @link      http://ournameismud.co.uk/
+ * @package   Contactical
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# {% do view.registerAssetBundle("ournameismud\\contactical\\assetbundles\\contactical\\ContacticalAsset") %} #}
+
+
+{% set fields = [
+	'address',
+	'web',
+	'telephone',
+	'email',
+	'location',
+] %}
+
+{% for item in fields %}
+	{{ forms.checkboxField({
+	    label: 'Show ' ~ item|ucfirst ~ ' Field',
+	    id: 'contactical' ~ item|ucfirst,
+	    name: 'contactical' ~ item|ucfirst,
+	    value: 1,
+	    checked: field['contactical' ~ item|ucfirst]
+	}) }}
+{% endfor %}
