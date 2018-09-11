@@ -24,6 +24,7 @@
 	'telephone',
 	'email',
 	'location',
+	'fax',
 ] %}
 
 {% for item in fields %}
@@ -32,6 +33,6 @@
 	    id: 'contactical' ~ item|ucfirst,
 	    name: 'contactical' ~ item|ucfirst,
 	    value: 1,
-	    checked: field['contactical' ~ item|ucfirst]
+	    checked: field['contactical' ~ item|ucfirst] is defined ? field['contactical' ~ item|ucfirst]
 	}) }}
 {% endfor %}

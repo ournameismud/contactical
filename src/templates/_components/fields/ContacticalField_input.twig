@@ -65,3 +65,13 @@
 	}) }}
 {% endif %}
 
+{% if field.contacticalFax %}
+	{{ forms.textField({
+	    label: 'Fax',
+	    id: id ~ 'contacticalFax',
+	    class: 'nicetext',
+	    name: name ~ '[contacticalFax]',
+	    value: value.contacticalFax is defined ? value.contacticalFax
+	}) }}
+{% endif %}
+

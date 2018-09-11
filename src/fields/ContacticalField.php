@@ -36,6 +36,7 @@ class ContacticalField extends Field
     public $contacticalAddress = 1,
         $contacticalWeb = 1,
         $contacticalEmail = 1,
+        $contacticalFax = 1,
         $contacticalTelephone = 1,
         $contacticalLocation = 1;
 
@@ -64,6 +65,7 @@ class ContacticalField extends Field
             ['contacticalWeb', 'boolean'],
             ['contacticalEmail', 'boolean'],
             ['contacticalTelephone', 'boolean'],
+            ['contacticalFax', 'boolean'],
             ['contacticalLocation', 'boolean'],
         ]);
         return $rules;
