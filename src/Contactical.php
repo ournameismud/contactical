@@ -47,7 +47,7 @@ class Contactical extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '0.0.1';
+    public $schemaVersion = '0.0.2';
 
     // Public Methods
     // =========================================================================
